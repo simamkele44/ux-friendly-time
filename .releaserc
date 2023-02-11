@@ -1,6 +1,6 @@
 branches:
   - master
-  - name: alpha
+  - name: develop
     prerelease: true
 debug: true
 ci: true
