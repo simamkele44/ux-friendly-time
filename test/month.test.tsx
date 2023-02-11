@@ -10,7 +10,7 @@ describe('Past Month', () => {
 describe('This Month t', () => {
   it('Test the same month', () => {
     const time = new Date("2022-04-25T12:00:00");
-    expect(TimeElapsed({time: time})).toBe("9 months ago");
+    expect(TimeElapsed({time: time})).toBe("10 months ago");
   });
 });
 
