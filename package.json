@@ -24,7 +24,7 @@
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {
-    "react": ">=18"
+    "react": ">=16"
   },
   "husky": {
     "hooks": {
