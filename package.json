@@ -88,6 +88,7 @@
   "dependencies": {
     "@semantic-release/exec": "^6.0.3",
     "git-cz": "^4.9.0",
+    "node": "^19.6.0",
     "tsdx": "^0.14.1"
   },
   "publishConfig": {
