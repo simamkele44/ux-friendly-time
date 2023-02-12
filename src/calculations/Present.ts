@@ -9,7 +9,7 @@ export class Present extends Tense{
 
     public CalcTime = (): string => {
 
-        if(Math.abs(this.ask_time.getMonth()-this.now_time.getMonth())<=1){
+        if(Math.abs(this.ask_time.getMonth()-this.now_time.getMonth())==0){
             if(Math.abs((this.ask_time.getDate())-this.now_time.getDate())<=1){
                 if(Math.abs(this.now_time.getHours()-this.ask_time.getHours())<=1){
                     if(Math.abs(this.now_time.getMinutes()-this.ask_time.getMinutes())<=1){

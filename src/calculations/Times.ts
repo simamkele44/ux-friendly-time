@@ -68,10 +68,10 @@ export class calcWeeks {
 
 export class calcMonths {
     static calc = (time: number): string => {
-        if(!(time<0)){
-            return (time>1? `${time} months ago`: `${time} month ago`);
+        if(time<0){
+            return ((time)*-1>1? `${(time)*-1} months ago`: `${(time)*-1} month ago`);
         }else{
-            return ((time)*-1>1? `Happening in ${(time)*-1} months`: `Happening in ${(time)*-1} month`);
+            return (time>1? `Happening in ${time} months`: `Happening in ${time} month`);
         }
 
     }

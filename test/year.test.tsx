@@ -1,18 +1,18 @@
 import TimeElapsed from '../src/TimeElapsed';
+import { past_dates, future_dates } from '../data/testdata';
 
 describe('Past Year', () => {
   it('Test if calculates year correctly', () => {
-    const time = new Date("1999-03-25T12:00:00");
-    expect(TimeElapsed({time: time})).toBe("24 years ago");
+    const ask_time = new Date(past_dates.years.past);
+    const now_time = new Date(past_dates.years.future);
+    expect(TimeElapsed({time: ask_time}, now_time)).toBe(past_dates.years['ux-friendly-time']);
   });
 });
 
 describe('Future Year', () => {
-  it('Test if calculates future year correctly', () => {
-    const time = new Date("2028-03-25T12:00:00");
-    expect(TimeElapsed({time: time})).toBe("Happening in 5 years");
+  it('Test if calculates year correctly', () => {
+    const ask_time = new Date(future_dates.years.future);
+    const now_time = new Date(future_dates.years.now);
+    expect(TimeElapsed({time: ask_time}, now_time)).toBe(future_dates.years['ux-friendly-time']);
   });
 });
-
-
-

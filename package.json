@@ -1,5 +1,5 @@
 {
-  "version": "ux-friendly-time",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -52,6 +52,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.19.6",
+    "@semantic-release/github": "^8.0.7",
     "@semantic-release/npm": "^9.0.1",
     "@size-limit/preset-small-lib": "^8.1.0",
     "@storybook/addon-essentials": "^6.5.13",
