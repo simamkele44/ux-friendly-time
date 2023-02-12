@@ -1,19 +1,19 @@
 import TimeElapsed from '../src/TimeElapsed';
+import { past_dates, future_dates } from '../data/testdata';
 
 describe('Past Month', () => {
-  it('Test month in a different year but less than 12 months', () => {
-    const time = new Date("2021-12-25T12:00:00");
-    expect(TimeElapsed({time: time})).toBe("2 years ago");
-  });
-});
-
-describe('This Month t', () => {
-  it('Test the same month', () => {
-    const time = new Date("2022-04-25T12:00:00");
-    expect(TimeElapsed({time: time})).toBe("10 months ago");
+  it('Month', () => {
+    const ask_time = new Date(past_dates.months.past);
+    const now_time = new Date(past_dates.months.future);
+    expect(TimeElapsed({time: ask_time}, now_time)).toBe(past_dates.months['ux-friendly-time']);
   });
 });
 
 
-
-
+describe('Future Months', () => {
+  it('Months', () => {
+    const ask_time = new Date(future_dates.months.future);
+    const now_time = new Date(future_dates.months.now);
+    expect(TimeElapsed({time: ask_time}, now_time)).toBe(future_dates.months['ux-friendly-time']);
+  });
+});

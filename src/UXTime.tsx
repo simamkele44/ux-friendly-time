@@ -4,7 +4,7 @@ import TimeElapsed from './TimeElapsed';
 type checkDateTime = {
   time: Date
 }
-export const UXTime:React.FC<checkDateTime> = (time: checkDateTime) => {
+export const UXFriendlyTime:React.FC<checkDateTime> = (time: checkDateTime) => {
 
   const asktime: checkDateTime = time;
   return (
