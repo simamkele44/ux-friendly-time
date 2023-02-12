@@ -7,8 +7,9 @@ export class Present extends Tense{
         super(ask_time, now_time);
     }
 
+    // This method determines if we should calculate time in years, months, days etc.
+    
     public CalcTime = (): string => {
-
         if(Math.abs(this.ask_time.getMonth()-this.now_time.getMonth())==0){
             if(Math.abs((this.ask_time.getDate())-this.now_time.getDate())<=1){
                 if(Math.abs(this.now_time.getHours()-this.ask_time.getHours())<=1){
